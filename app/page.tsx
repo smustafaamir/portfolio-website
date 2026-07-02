@@ -4,6 +4,7 @@ import { Header } from "./components/header/header";
 import { Hero } from "./components/hero/hero";
 import { Projects } from "./components/projects/projects";
 import { Publications } from "./components/publications/publications";
+import { Stack } from "./components/stack/stack";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Experience />
       <Projects />
       <Publications />
+      <Stack />
     </main>
   );
 }
