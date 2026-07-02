@@ -281,7 +281,7 @@ const stackCategories: StackCategory[] = [
 ];
 
 const tabTriggerClassName =
-  "!h-auto !min-h-0 shrink-0 !flex-none rounded-none border-0 bg-transparent px-0 pb-3 pt-1 text-sm font-medium leading-normal text-muted-foreground shadow-none transition-colors duration-200 ease-out hover:text-ink-navy focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink-navy data-active:bg-transparent data-active:text-ink data-active:shadow-none after:!bottom-0 after:h-px after:bg-ink group-data-[variant=line]/tabs-list:data-active:after:opacity-100 dark:data-active:bg-transparent dark:data-active:text-ink sm:text-base";
+  "!h-auto !min-h-0 shrink-0 !flex-none rounded-none border-0 bg-transparent px-0 pb-2 pt-1 text-sm font-medium leading-normal text-muted-foreground shadow-none transition-colors duration-200 ease-out after:hidden hover:text-ink-navy focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink-navy data-active:bg-transparent data-active:text-ink data-active:shadow-none dark:data-active:bg-transparent dark:data-active:text-ink sm:text-base";
 
 const linkClassName =
   "group/link inline-flex items-center gap-1 font-sans text-base font-semibold text-ink transition-colors duration-200 ease-out hover:text-ink-navy focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink-navy md:text-lg";

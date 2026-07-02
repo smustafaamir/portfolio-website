@@ -1,5 +1,6 @@
 import { Education } from "./components/education/education";
 import { Experience } from "./components/experience/experience";
+import { Footer } from "./components/footer/footer";
 import { Header } from "./components/header/header";
 import { Hero } from "./components/hero/hero";
 import { Projects } from "./components/projects/projects";
@@ -8,16 +9,19 @@ import { Stack } from "./components/stack/stack";
 
 export default function Home() {
   return (
-    <main className="flex flex-1 flex-col">
-      <Header />
-      <div className="landing-fold flex min-h-[calc(100svh_-_var(--site-header-height))] flex-col">
-        <Hero />
-      </div>
-      <Education />
-      <Experience />
-      <Projects />
-      <Publications />
-      <Stack />
-    </main>
+    <>
+      <main className="flex flex-1 flex-col">
+        <Header />
+        <div className="landing-fold flex min-h-[calc(100svh_-_var(--site-header-height))] flex-col">
+          <Hero />
+        </div>
+        <Education />
+        <Experience />
+        <Projects />
+        <Publications />
+        <Stack />
+      </main>
+      <Footer />
+    </>
   );
 }
