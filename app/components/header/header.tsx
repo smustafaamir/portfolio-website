@@ -3,7 +3,6 @@ import { cn } from "@/lib/utils";
 import { ThemeToggle } from "./theme-toggle";
 
 const navLinks = [
-  { href: "#about", label: "About" },
   { href: "#education", label: "Education" },
   { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },

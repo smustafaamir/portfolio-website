@@ -8,8 +8,8 @@ import { Publications } from "./components/publications/publications";
 export default function Home() {
   return (
     <main className="flex flex-1 flex-col">
-      <div className="landing-fold flex min-h-svh flex-col">
-        <Header />
+      <Header />
+      <div className="landing-fold flex min-h-[calc(100svh_-_var(--site-header-height))] flex-col">
         <Hero />
       </div>
       <Education />
