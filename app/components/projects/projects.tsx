@@ -23,6 +23,19 @@ const projects = [
     featured: true,
   },
   {
+    id: "cards",
+    title: "Cards",
+    description:
+      "RAG-powered personal research assistant — search arXiv, PubMed, and CORE, curate a paper library, and chat with citations over your indexed collection.",
+    stack: ["Next.js", "FastAPI", "Python", "ChromaDB", "Groq", "Docker"],
+    sourceUrl: "https://github.com/smustafaamir/cards",
+    image: {
+      src: "/cards/Cards.jpg",
+      alt: "Cards — RAG-powered personal research assistant",
+    },
+    featured: true,
+  },
+  {
     id: "yolov8-fastapi",
     title: "YOLOv8 with FastAPI",
     description:
@@ -50,8 +63,13 @@ const projects = [
 
 type Project = (typeof projects)[number];
 
-const featuredProject = projects[0];
-const secondaryProjects = projects.slice(1);
+const featuredProjects = projects.filter(
+  (project): project is Project & { featured: true } =>
+    "featured" in project && project.featured === true
+);
+const secondaryProjects = projects.filter(
+  (project) => !("featured" in project && project.featured === true)
+);
 
 const sourceLinkClassName =
   "group/link inline-flex items-center gap-1 font-sans text-sm font-medium text-ink underline-offset-4 hover:text-ink-navy hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink-navy";
@@ -193,7 +211,9 @@ export function Projects() {
         </TypographyH2>
 
         <div className="mt-8 space-y-10 md:mt-10 md:space-y-12">
-          <FeaturedProject project={featuredProject} />
+          {featuredProjects.map((project) => (
+            <FeaturedProject key={project.id} project={project} />
+          ))}
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
             {secondaryProjects.map((project) => (

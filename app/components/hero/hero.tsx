@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { TypographyH1, TypographyLead } from "@/components/ui/typography";
 import { sectionX } from "@/lib/section-spacing";
-import { ArrowUpRight } from "lucide-react";
-import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { ArrowUpRight } from "lucide-react";
+import { HeroDitherLoader } from "./hero-dither-loader";
 
 export function Hero() {
   return (
@@ -14,19 +14,7 @@ export function Hero() {
       )}
       aria-labelledby="hero-name"
     >
-      <Image
-        src="/gradient.webp"
-        alt=""
-        fill
-        priority
-        sizes="100vw"
-        className="-z-20 object-cover object-center"
-      />
-
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-r from-paper/80 from-0% via-paper/30 via-40% to-transparent to-65% dark:from-[#111]/85 dark:via-[#111]/25 dark:to-transparent"
-      />
+      <HeroDitherLoader />
 
       <div className="relative mx-auto flex w-full max-w-[1100px] flex-col gap-6 md:gap-8">
         <div className="flex flex-col gap-6 md:gap-8">
