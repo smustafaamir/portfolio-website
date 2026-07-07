@@ -44,14 +44,8 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
   --section-gap: 3rem;
-  /* Sticky header height — single row (lg+); wrapped nav below lg */
-  --site-header-height: 7rem;
-}
-
-@media (min-width: 1024px) {
-  :root {
-    --site-header-height: 4.5rem;
-  }
+  /* Sticky header height — single-row bar */
+  --site-header-height: 4.5rem;
 }
 
 @theme inline {
