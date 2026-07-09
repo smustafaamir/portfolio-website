@@ -9,7 +9,8 @@ export function Hero() {
   return (
     <section
       className={cn(
-        "relative isolate flex min-h-0 flex-1 w-full items-center overflow-hidden py-12 md:py-16",
+        "relative isolate flex min-h-svh w-full items-center overflow-hidden pb-12 md:pb-16",
+        "pt-[var(--site-header-height)]",
         sectionX
       )}
       aria-labelledby="hero-name"

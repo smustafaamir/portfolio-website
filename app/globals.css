@@ -44,8 +44,12 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
   --section-gap: 3rem;
-  /* Sticky header height — single-row bar */
-  --site-header-height: 4.5rem;
+  /* Floating pill header: top inset + pill row */
+  --site-header-top-inset: 1rem;
+  --site-header-pill-height: 3.5rem;
+  --site-header-height: calc(
+    var(--site-header-top-inset) + var(--site-header-pill-height)
+  );
 }
 
 @theme inline {

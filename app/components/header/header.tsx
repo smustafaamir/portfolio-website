@@ -1,8 +1,13 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { navLinks } from "@/lib/nav-links";
+import { sectionX } from "@/lib/section-spacing";
+import { cn } from "@/lib/utils";
 import { MobileNav } from "./mobile-nav";
 import { NavLink } from "./nav-link";
 import { ThemeToggle } from "./theme-toggle";
+
+const pillClassName =
+  "rounded-full border border-hairline bg-surface/95 backdrop-blur-sm supports-[backdrop-filter]:bg-surface/90";
 
 function HeaderAvatar() {
   return (
@@ -23,23 +28,41 @@ function HeaderAvatar() {
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full shrink-0 border-b border-hairline bg-paper/90 backdrop-blur-sm supports-[backdrop-filter]:bg-paper/80">
-      <div className="mx-auto w-full max-w-[1100px] px-6 py-4 sm:px-8 md:px-16">
-        <div className="flex items-center justify-between lg:hidden">
+    <header className="pointer-events-none sticky top-0 z-50 w-full shrink-0 pt-[var(--site-header-top-inset)]">
+      <div
+        className={cn(
+          "pointer-events-auto mx-auto w-full max-w-[1100px]",
+          sectionX
+        )}
+      >
+        <div
+          className={cn(
+            pillClassName,
+            "flex items-center justify-between gap-3 px-3 py-2 sm:px-4 sm:py-2.5 lg:hidden"
+          )}
+        >
           <HeaderAvatar />
-          <div className="flex items-center gap-2 sm:gap-3">
+          <div className="flex items-center gap-1 sm:gap-2">
             <ThemeToggle />
             <MobileNav />
           </div>
         </div>
 
-        <div className="hidden items-center lg:grid lg:grid-cols-[minmax(0,25%)_minmax(0,50%)_minmax(0,25%)]">
-          <div className="flex items-center lg:justify-start">
+        <div
+          className={cn(
+            pillClassName,
+            "relative hidden items-center px-4 py-2.5 lg:flex lg:px-5"
+          )}
+        >
+          <div className="flex shrink-0 items-center">
             <HeaderAvatar />
           </div>
 
-          <nav aria-label="Primary" className="lg:col-start-2">
-            <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 sm:gap-x-8">
+          <nav
+            aria-label="Primary"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+          >
+            <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-1 xl:gap-x-8">
               {navLinks.map(({ href, label }) => (
                 <li key={href}>
                   <NavLink href={href}>{label}</NavLink>
@@ -48,7 +71,7 @@ export function Header() {
             </ul>
           </nav>
 
-          <div className="flex items-center justify-end lg:col-start-3">
+          <div className="ml-auto flex shrink-0 items-center">
             <ThemeToggle />
           </div>
         </div>

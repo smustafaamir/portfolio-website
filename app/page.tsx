@@ -12,7 +12,7 @@ export default function Home() {
     <>
       <main className="flex flex-1 flex-col">
         <Header />
-        <div className="landing-fold flex min-h-[calc(100svh_-_var(--site-header-height))] flex-col">
+        <div className="landing-fold relative -mt-[var(--site-header-height)] min-h-svh">
           <Hero />
         </div>
         <Education />
