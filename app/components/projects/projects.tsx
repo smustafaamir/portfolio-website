@@ -17,7 +17,7 @@ const projects = [
     stack: ["Python", "FastAPI", "PostgreSQL", "Redis", "Docker"],
     sourceUrl: "https://github.com/smustafaamir/OpenPulse",
     image: {
-      src: "/openpulse/OpenPulse-alt.jpg",
+      src: "/openpulse/OpenPulse-alt-2.png",
       alt: "OpenPulse — open-source event intelligence platform",
     },
     featured: true,
@@ -30,7 +30,7 @@ const projects = [
     stack: ["Next.js", "FastAPI", "Python", "ChromaDB", "Groq", "Docker"],
     sourceUrl: "https://github.com/smustafaamir/cards",
     image: {
-      src: "/cards/Cards.jpg",
+      src: "/cards/Cards-alt.png",
       alt: "Cards — RAG-powered personal research assistant",
     },
     featured: true,
